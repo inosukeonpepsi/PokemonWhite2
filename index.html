@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Black and White</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #emulator {
+            margin: 20px auto;
+            width: 800px;
+            height: 600px;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokémon Black and White</h1>
+    <div id="emulator"></div>
+    <script src="emulator.js"></script>
+    <script>
+        // Initialize the emulator
+        const emulator = new EmulatorJS({
+            container: document.getElementById('emulator'),
+            romUrl: 'rom.nds', // Path to your ROM file
+            biosUrl: 'bios.bin', // DS BIOS file (if required)
+            core: 'nds', // Specify the core for Nintendo DS
+        });
+
+        emulator.start();
+    </script>
+</body>
+</html>
